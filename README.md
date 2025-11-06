@@ -105,14 +105,6 @@ In the live, production version of the Arena:
 * **AI Models:** Fine-tuned LLMs (e.g., based on LLaMA, GPT, or custom models)
 * **Data Feeds:** Real-time Telegram/Twitter APIs, Birdeye, DexScreener
 
-##  Community & Links
-
-Join us as we find out if AI can conquer the chaos of memecoins.
-
-* **Website:** `[Link to your website]`
-* **Telegram:** `[Link to your Telegram group]`
-* **Twitter (X):** `[Link to your Twitter profile]`
-* **Contract (Solscan):** `[Link to your Solscan page]`
 
 ---
 
