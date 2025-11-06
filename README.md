@@ -1,10 +1,5 @@
---- SECTION 1 START ---
-
 🔬 DeSci Arena: Autonomous AI Trading for Community Growth
 Ticker: $AIArena | Status: Alpha Release | Core: Autonomous Agentic Framework
-
---- SECTION 1 END ---
---- SECTION 2 START ---
 
 🌟 Project Overview
 DeSci Arena is an open-source, agentic framework that pits GPT-5 against Grok-4 in a live, simulated memecoin trading arena. The system autonomously detects new token launches on Pump.fun, executes trades based on each AI's persona, and programmatically routes all net profits back to the $AIArena community.
@@ -14,9 +9,6 @@ This is a DeSci (Decentralized Science) experiment to:
 Benchmark AI: Transparently compare the trading effectiveness of competing LLMs.
 
 Innovate Tokenomics: Establish a self-sustaining system where AI-generated profits directly reward $AIArena holders.
-
---- SECTION 2 END ---
---- SECTION 3 START ---
 
 💰 $AIArena: The Profit Distribution Mechanism
 The $AIArena token is the core of the ecosystem. It is designed to be the direct beneficiary of the AI's trading success. This is not a "utility" token; it is a profit-share token.
@@ -34,105 +26,6 @@ Strategic Buybacks: Automatically purchasing $AIArena tokens from the open marke
 Community Supply Drops: Airdropping remaining profits (in USDC or bought-back tokens) directly to $AIArena holders.
 
 This mechanism creates a direct, immutable link between AI performance and community wealth generation.
-
---- SECTION 3 END ---
-You are completely right. My apologies. I was so focused on providing a "visual" element that I ignored your core feedback. You are 100% correct, the ASCII art and the image were both bad calls and unprofessional. "Great" means clean, direct, and trusting the text and code to speak for themselves.
-
-I have removed the image section entirely and replaced it with a concise, text-only tokenomics section.
-
-Here is the "Explain Like I'm 5" guide, followed by the 9 clean, separate sections for you to copy and paste.
-
-How to Post Your README (Simple Step-by-Step)
-Step 1: Go to Your GitHub Project
-
-Go to the main page of your desci-arena project on GitHub.
-
-Step 2: Create the README.md File
-
-On your project page, you should see a button that says "Add a README". Click it.
-
-(If you don't see that, click "Add file" -> "Create new file" and name this file README.md.)
-
-You will now see a big white box where you can type.
-
-Step 3: Copy and Paste the 9 Sections
-
-Below this guide, I have given you 9 Sections (from "Section 1" to "Section 9").
-
-Carefully copy all the text inside the box for Section 1.
-
-Paste it into the big white box on GitHub.
-
-Go back to my instructions. Copy all the text for Section 2.
-
-Paste it right after your first section in the GitHub box.
-
-Repeat this for all 9 sections, one after another, in order.
-
-You will now have one big, professional-looking document.
-
-Step 4: Save Your README
-
-Scroll to the bottom of the GitHub page.
-
-Click the big green "Commit changes" button.
-
-You are done. Your professional README is now live.
-
-Section 1: Title and Badges
-(Copy and paste this block first)
-
---- SECTION 1 START ---
-
-🔬 DeSci Arena: Autonomous AI Trading for Community Growth
-Ticker: $AIArena | Status: Alpha Release | Core: Autonomous Agentic Framework
-
---- SECTION 1 END ---
-
-Section 2: Project Overview
-(Copy and paste this block second)
-
---- SECTION 2 START ---
-
-🌟 Project Overview
-DeSci Arena is an open-source, agentic framework that pits GPT-5 against Grok-4 in a live, simulated memecoin trading arena. The system autonomously detects new token launches on Pump.fun, executes trades based on each AI's persona, and programmatically routes all net profits back to the $AIArena community.
-
-This is a DeSci (Decentralized Science) experiment to:
-
-Benchmark AI: Transparently compare the trading effectiveness of competing LLMs.
-
-Innovate Tokenomics: Establish a self-sustaining system where AI-generated profits directly reward $AIArena holders.
-
---- SECTION 2 END ---
-
-Section 3: $AIArena Token: Core to DeSci Arena
-(Copy and paste this block third. This is the new, text-only token section.)
-
---- SECTION 3 START ---
-
-💰 $AIArena: The Profit Distribution Mechanism
-The $AIArena token is the core of the ecosystem. It is designed to be the direct beneficiary of the AI's trading success. This is not a "utility" token; it is a profit-share token.
-
-The value flow is direct and transparent:
-
-AI Agents Trade: GPT-5 and Grok-4 trade memecoins on Pump.fun, generating a net profit (or loss) in USDC.
-
-Profits to Treasury: All net profits are programmatically routed to the on-chain Community Treasury (a Solana smart contract).
-
-Treasury Executes Actions: The Treasury uses these profits for two main functions:
-
-Strategic Buybacks: Automatically purchasing $AIArena tokens from the open market to reduce supply and increase value.
-
-Community Supply Drops: Airdropping remaining profits (in USDC or bought-back tokens) directly to $AIArena holders.
-
-This mechanism creates a direct, immutable link between AI performance and community wealth generation.
-
---- SECTION 3 END ---
-
-Section 4: The Arena: GPT-5 vs. Grok-4
-(Copy and paste this block fourth.)
-
---- SECTION 4 START ---
 
 ✨ The Arena: GPT-5 vs. Grok-4
 The Arena pits two AI titans in a continuous, real-time trading battle:
@@ -149,9 +42,6 @@ Persona: Bold, opportunistic. Capitalizes on extreme volatility and early pumps 
 
 Goal: Rapid profit maximization, high-risk/high-reward trades.
 
---- SECTION 4 END ---
---- SECTION 5 START ---
-
 💻 Source Code Deep Dive: The Arena Core
 The core logic resides in src/arena_core/, implementing a deterministic, auditable loop for AI-driven trading.
 
@@ -161,11 +51,11 @@ src/arena_core/modules/pump_scanner.py (Data Acquisition) A specialized module t
 
 src/arena_core/modules/llm_trader.py (Decision Engine) This module receives market data and portfolio state. It constructs persona-specific prompts for GPT-5 (Analyst) and Grok-4 (Degen) and parses their structured JSON responses (BUY, SELL,HOLD) to be executed by the orchestrator.
 
---- SECTION 5 END ---
---- SECTION 6 START ---
-
 Core Simulation Code (main_loop.py)
 This is the entry point for demonstrating the AI trading simulation.
+
+Python
+
 # Reference: src/arena_core/main_loop.py
 # This is the entry point for demonstrating the AI trading simulation.
 
@@ -273,9 +163,6 @@ def run_arena_loop():
 
 if __name__ == "__main__":
     run_arena_loop()
-    --- SECTION 6 END ---
-    --- SECTION 7 START ---
-
 ⚙️ Getting Started (Easy Setup)
 This project is a full-stack application (FastAPI + React). Follow these steps to run it locally.
 
@@ -287,12 +174,15 @@ Node.js 18+ (with npm or yarn)
 Git
 
 1. Clone the Repository
-    git clone https://github.com/your-username/desci-arena.git
+Bash
+
+git clone https://github.com/your-username/desci-arena.git
 cd desci-arena
 2. Configure Environment (.env)
 The backend requires API keys to function. Create a .env file in the backend/ directory with the following content:
 
 File: backend/.env
+
 # API Key for GPT-5 (OpenAI)
 OPENAI_API_KEY=sk-YourOpenAIKeyHere
 
@@ -304,24 +194,27 @@ SOLANA_RPC_URL=https://your-solana-rpc-url-here
 Note: This file is in .gitignore and should never be committed.
 
 3. Setup & Run Backend (Terminal 1)
-   # Navigate to backend
+Bash
+
+# Navigate to backend
 cd backend
 
 # Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate  # Mac/Linux
-.\venv\Scripts\activate   # Windows
+source v_env/bin/activate  # Mac/Linux
+.\v_env\Scripts\activate   # Windows
 
 # Install Python requirements
 pip install -r requirements.txt
 
 # Run the backend server
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-
 Your backend is now live at http://localhost:8000.
 
 4. Setup & Run Frontend (Terminal 2)
-  # Navigate to frontend
+Bash
+
+# Navigate to frontend
 cd frontend
 
 # Install Node.js dependencies
@@ -329,12 +222,7 @@ npm install
 
 # Run the frontend dev server
 npm run dev
-
 Your browser will automatically open to the DeSci Arena dashboard, connected to your local backend.
-
---- SECTION 7 END ---
-
---- SECTION 8 START ---
 
 🛣️ Roadmap
 Phase 1 (Alpha - Current): Core simulation logic, API integration, and local dashboard.
@@ -345,14 +233,8 @@ Phase 3 (V1.0 - On-Chain): Audit and deployment of the $AIArena token and the Co
 
 Phase 4 (V2.0 - Governance): Launch of the DeSci Arena DAO to allow $AIArena holders to vote on protocol parameters and strategy.
 
---- SECTION 8 END ---
-
---- SECTION 9 START ---
-
 🤝 Contribution
 We welcome contributions from developers, AI researchers, and DeSci advocates. Please open an Issue to discuss new features or report bugs. Submit a Pull Request to contribute code.
 
 📄 License
 This project is licensed under the MIT License. See the LICENSE file for full details.
-
---- SECTION 9 END ---
