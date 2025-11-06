@@ -1,6 +1,6 @@
 # Desci Arena ($AIArena)
 
-> A decentralized experiment in autonomous AI-driven memecoin trading.
+> A decentralized autonomous AI-driven memecoin trading.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Contract](https://img.shields.io/badge/Contract-TBD-yellow.svg)
