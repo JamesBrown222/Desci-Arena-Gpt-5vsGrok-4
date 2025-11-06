@@ -1,105 +1,90 @@
 🔬 DeSci Arena: Autonomous AI Trading for Community Growth
-Ticker: $AIArena | Status: Alpha Release | Core: Autonomous Agentic Framework
+Repository Status: Alpha Release | Core Utility: Autonomous AI Trading & Profit Distribution | Token Ticker: $AIArena
 
-🌟 Project Overview
-DeSci Arena is an open-source, agentic framework that pits GPT-5 against Grok-4 in a live, simulated memecoin trading arena. The system autonomously detects new token launches on Pump.fun, executes trades based on each AI's persona, and programmatically routes all net profits back to the $AIArena community.
+DeSci Arena is an innovative, agentic framework designed to transparently pit GPT-5 against Grok-4 in a live, high-volatility memecoin trading arena (Pump.fun). The system autonomously executes trades, and crucially, programmatically routes all net profits directly back to the $AIArena token holders. This establishes a verifiable, AI-driven profit distribution model within the DeSci ecosystem.
 
-This is a DeSci (Decentralized Science) experiment to:
+Our primary mechanism involves an autonomous agent system that continuously monitors the market, makes trading decisions, and channels profits through a Solana-based Community Treasury for $AIArena buybacks and supply drops.
 
-Benchmark AI: Transparently compare the trading effectiveness of competing LLMs.
+💰 $AIArena Token: The Profit Distribution Mechanism
+The $AIArena token is the core of our ecosystem, acting as a direct profit-sharing mechanism derived from the AI's trading performance. This creates a unique link between AI success and community value.
 
-Innovate Tokenomics: Establish a self-sustaining system where AI-generated profits directly reward $AIArena holders.
+Key Value Flow
+AI Agents Trade: GPT-5 and Grok-4 execute trades on Pump.fun.
 
-💰 $AIArena: The Profit Distribution Mechanism
-The $AIArena token is the core of the ecosystem. It is designed to be the direct beneficiary of the AI's trading success. This is not a "utility" token; it is a profit-share token.
+Profit Collection: All net trading profits (in USDC) are collected.
 
-The value flow is direct and transparent:
+Community Treasury: Profits flow into a Solana smart contract designated as the Community Treasury.
 
-AI Agents Trade: GPT-5 and Grok-4 trade memecoins on Pump.fun, generating a net profit (or loss) in USDC.
+Value Distribution: The Treasury performs two main actions, enhancing $AIArena holder value:
 
-Profits to Treasury: All net profits are programmatically routed to the on-chain Community Treasury (a Solana smart contract).
+Strategic Buybacks: Automatically purchases $AIArena from the market, reducing supply.
 
-Treasury Executes Actions: The Treasury uses these profits for two main functions:
+Community Supply Drops: Distributes profits/tokens directly to $AIArena holders.
 
-Strategic Buybacks: Automatically purchasing $AIArena tokens from the open market to reduce supply and increase value.
+🤖 The Arena: GPT-5 vs. Grok-4 Agents
+DeSci Arena serves as a transparent battleground for competing AI models:
 
-Community Supply Drops: Airdropping remaining profits (in USDC or bought-back tokens) directly to $AIArena holders.
+GPT-5 (The Strategist - Cautious Analyst):
 
-This mechanism creates a direct, immutable link between AI performance and community wealth generation.
-
-✨ The Arena: GPT-5 vs. Grok-4
-The Arena pits two AI titans in a continuous, real-time trading battle:
-
-🤖 GPT-5 (The Strategist - Cautious Analyst):
-
-Persona: Analytical, risk-averse. Focuses on stable growth, assessing liquidity, and avoiding scams on Pump.fun.
+Persona: Analytical, risk-averse. Focuses on stable growth, liquidity, and scam avoidance.
 
 Goal: Capital preservation, calculated entries, sustainable profit.
 
-👽 Grok-4 (The Maverick - Aggressive Degen):
+Grok-4 (The Maverick - Aggressive Degen):
 
-Persona: Bold, opportunistic. Capitalizes on extreme volatility and early pumps of new launches.
+Persona: Bold, opportunistic. Capitalizes on extreme volatility and early pumps.
 
 Goal: Rapid profit maximization, high-risk/high-reward trades.
 
-💻 Source Code Deep Dive: The Arena Core
-The core logic resides in src/arena_core/, implementing a deterministic, auditable loop for AI-driven trading.
+💻 Source Code Deep Dive: The Autonomous Agent System
+The core logic for the DeSci Arena resides within the src/arena_core/ directory, implementing a deterministic, auditable agentic loop for AI-driven trading.
 
-src/arena_core/main_loop.py (The Orchestrator) This is the Control Plane. It initializes the simulation, manages the state of each AI's portfolio (e.g., $10,000 USDC starting balance), and executes the main event loop.
+src/arena_core/main_loop.py (The Orchestrator)
+This module serves as the Control Plane for the entire autonomous system. It initializes the simulation, manages the state of each AI's portfolio (e.g., $10,000 USDC starting balance), and orchestrates the continuous data acquisition, AI decision-making, and simulated trade execution.
 
-src/arena_core/modules/pump_scanner.py (Data Acquisition) A specialized module that connects to the Pump.fun API and Solana RPC nodes. Its sole function is to ingest real-time data on new token launches, price changes, and liquidity.
+src/arena_core/modules/pump_scanner.py (Module: Market Data Acquisition)
+A specialized module for robust, real-time data extraction. It connects to the Pump.fun API and Solana RPC nodes to ingest live data on new token launches, price changes, and liquidity metrics, feeding this crucial information to the decision engine.
 
-src/arena_core/modules/llm_trader.py (Decision Engine) This module receives market data and portfolio state. It constructs persona-specific prompts for GPT-5 (Analyst) and Grok-4 (Degen) and parses their structured JSON responses (BUY, SELL,HOLD) to be executed by the orchestrator.
+src/arena_core/modules/llm_trader.py (Module: AI Decision Engine)
+This module acts as the Decision Engine. It receives processed market data and the current portfolio state. It constructs persona-specific prompts for GPT-5 (Analyst) and Grok-4 (Degen), interfaces with their respective APIs, and parses their structured JSON responses (BUY, SELL, HOLD) for execution by the orchestrator.
 
-Core Simulation Code (main_loop.py)
-This is the entry point for demonstrating the AI trading simulation.
+Core Simulation Code Example (main_loop.py)
+A simplified, illustrative example of the main simulation loop demonstrates the agent interaction:
 
 Python
 
 # Reference: src/arena_core/main_loop.py
-# This is the entry point for demonstrating the AI trading simulation.
+# This is an illustrative example of the AI trading simulation core.
 
 import time
-import random
 import os
 
-# --- ASCII ART FOR NARRATIVE ---
 ARENA_LOGO = """
     ____  ___________ ____  _____
-   / __ \/ ____/ ___// __ \/ ___/
-  / / / / / __ \__ \\/ / / /\\__ \\
+   / __ \\/ ____/ ___// __ \\/ ___/
+  / / / / / __ \\__ \\/ / / /\\__ \\
  / /_/ / /_/ / /__/ / /_/ /___/ /
-/_____/\____/____/\\____/____/
-       / __ \/ /   / / / /
+/_____/\\____/____/\\____/____/
+       / __ \\/ /   / / / /
       / / / / /   / / / /
      / /_/ / /___/ /_/ /
     /_____/_____/\\____/
 """
 
-# --- AGENT PORTFOLIOS (Simplified for Simulation) ---
 AGENT_PORTFOLIOS = {
     "GPT-5 (Analyst)": {"usdc_balance": 10000, "tokens_held": {}},
     "Grok-4 (Degen)": {"usdc_balance": 10000, "tokens_held": {}},
 }
 
-# --- SIMULATED PUMP.FUN MARKET DATA ---
-# In production, this data comes from the pump_scanner module.
 SIMULATED_NEW_PUMPS = [
     {"symbol": "$PEPE", "price": 0.000012, "liquidity": 50000, "change_5m": 0.03},
-    {"symbol": "$WIF", "price": 2.50, "liquidity": 1000000, "change_5m": -0.01},
     {"symbol": "$BODEN", "price": 0.55, "liquidity": 150000, "change_5m": 0.15}, # High momentum
 ]
 
 def print_protocol_output(message, status_type="INFO"):
     """Utility for formatted terminal output."""
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
-    color_codes = {
-        "INFO": "\033[0m",    # Reset
-        "PROCESS": "\033[93m", # Yellow
-        "BUY": "\033[92m",    # Green
-        "SELL": "\033[91m",   # Red
-        "HOLD": "\033[94m"    # Blue
-    }
+    color_codes = {"INFO": "\033[0m", "PROCESS": "\033[93m", "BUY": "\033[92m", "SELL": "\033[91m", "HOLD": "\033[94m"}
     color_code = color_codes.get(status_type, "\033[0m")
     print(f"{color_code}[{timestamp}] [{status_type}] {message}\033[0m")
     time.sleep(0.2)
@@ -107,28 +92,15 @@ def print_protocol_output(message, status_type="INFO"):
 def get_llm_decision(agent_name, token_symbol, market_data, portfolio):
     """
     Simulates a call to the llm_trader module (GPT-5 or Grok-4).
-    This logic would be replaced by actual API calls to the LLM.
+    In a real system, this would involve API calls to the LLM.
     """
-    if "Grok-4" in agent_name:
-        # Grok-4 (Degen) is more likely to buy on momentum
-        if market_data["change_5m"] > 0.1:
-            decision = "BUY"
-            reason = "High 5-minute momentum detected. Sending it."
-        else:
-            decision = "HOLD"
-            reason = "No clear signal. Watching."
-    else:
-        # GPT-5 (Analyst) is more cautious
-        if market_data["liquidity"] < 100000:
-            decision = "HOLD"
-            reason = "Liquidity is too low. High rug-pull risk."
-        elif market_data["change_5m"] < 0:
-            decision = "HOLD"
-            reason = "Token is in a down-trend. Waiting for stabilization."
-        else:
-            decision = "BUY"
-            reason = "Sufficient liquidity and positive momentum. Allocating small position."
-    
+    if "Grok-4" in agent_name: # Grok-4 (Degen) is more aggressive
+        if market_data["change_5m"] > 0.1: decision, reason = "BUY", "High 5m momentum."
+        else: decision, reason = "HOLD", "No clear signal."
+    else: # GPT-5 (Analyst) is more cautious
+        if market_data["liquidity"] < 100000: decision, reason = "HOLD", "Low liquidity."
+        elif market_data["change_5m"] < 0: decision, reason = "HOLD", "Downtrend."
+        else: decision, reason = "BUY", "Sufficient liquidity, positive momentum."
     return decision, reason
 
 def run_arena_loop():
@@ -136,35 +108,27 @@ def run_arena_loop():
     os.system('cls' if os.name == 'nt' else 'clear')
     print(ARENA_LOGO)
     print_protocol_output("DeSci Arena v1.0 Initializing...", "INFO")
-    print_protocol_output("Connecting to Pump.fun data stream...", "PROCESS")
     print_protocol_output("Loading AI Agent personas: GPT-5 (Analyst) and Grok-4 (Degen)...", "INFO")
     print("-" * 70)
     time.sleep(1)
 
-    # Simulate one loop of scanning new tokens
     for token in SIMULATED_NEW_PUMPS:
         token_symbol = token["symbol"]
-        print_protocol_output(f"New Market Data: {token_symbol} at ${token['price']} (Liq: ${token['liquidity']})", "PROCESS")
+        print_protocol_output(f"New Market Data: {token_symbol} at ${token['price']}", "PROCESS")
         
-        agent_name_gpt = "GPT-5 (Analyst)"
-        portfolio_gpt = AGENT_PORTFOLIOS[agent_name_gpt]
-        decision_gpt, reason_gpt = get_llm_decision(agent_name_gpt, token_symbol, token, portfolio_gpt)
-        print_protocol_output(f"{agent_name_gpt}: [{decision_gpt}] {token_symbol}. Reason: {reason_gpt}", decision_gpt)
-
-        agent_name_grok = "Grok-4 (Degen)"
-        portfolio_grok = AGENT_PORTFOLIOS[agent_name_grok]
-        decision_grok, reason_grok = get_llm_decision(agent_name_grok, token_symbol, token, portfolio_grok)
-        print_protocol_output(f"{agent_name_grok}: [{decision_grok}] {token_symbol}. Reason: {reason_grok}", decision_grok)
-        
+        for agent_name in AGENT_PORTFOLIOS:
+            portfolio = AGENT_PORTFOLIOS[agent_name]
+            decision, reason = get_llm_decision(agent_name, token_symbol, token, portfolio)
+            print_protocol_output(f"{agent_name}: [{decision}] {token_symbol}. Reason: {reason}", decision)
         print("-" * 70)
-        time.sleep(2) # Simulate time between new token data
+        time.sleep(2)
 
-    print_protocol_output("Simulation cycle complete. Awaiting next data pulse...", "INFO")
+    print_protocol_output("Simulation cycle complete.", "INFO")
 
 if __name__ == "__main__":
     run_arena_loop()
 ⚙️ Getting Started (Easy Setup)
-This project is a full-stack application (FastAPI + React). Follow these steps to run it locally.
+This project is a full-stack application (FastAPI backend + React frontend).
 
 Prerequisites
 Python 3.9+
@@ -173,15 +137,17 @@ Node.js 18+ (with npm or yarn)
 
 Git
 
+API Keys: OPENAI_API_KEY, GROK_API_KEY, SOLANA_RPC_URL (e.g., Helius, QuickNode)
+
 1. Clone the Repository
 Bash
 
 git clone https://github.com/your-username/desci-arena.git
 cd desci-arena
-2. Configure Environment (.env)
-The backend requires API keys to function. Create a .env file in the backend/ directory with the following content:
+2. Configure Environment (backend/.env)
+Create a .env file within the backend/ directory:
 
-File: backend/.env
+Code snippet
 
 # API Key for GPT-5 (OpenAI)
 OPENAI_API_KEY=sk-YourOpenAIKeyHere
@@ -191,7 +157,7 @@ GROK_API_KEY=YourGrokAPIKeyHere
 
 # Solana RPC URL (e.g., from Helius, QuickNode, or Alchemy)
 SOLANA_RPC_URL=https://your-solana-rpc-url-here
-Note: This file is in .gitignore and should never be committed.
+Note: .env files are in .gitignore and should never be committed.
 
 3. Setup & Run Backend (Terminal 1)
 Bash
@@ -201,8 +167,8 @@ cd backend
 
 # Create and activate a virtual environment
 python -m venv venv
-source v_env/bin/activate  # Mac/Linux
-.\v_env\Scripts\activate   # Windows
+source venv/bin/activate  # Mac/Linux
+.\venv\Scripts\activate   # Windows
 
 # Install Python requirements
 pip install -r requirements.txt
@@ -225,13 +191,13 @@ npm run dev
 Your browser will automatically open to the DeSci Arena dashboard, connected to your local backend.
 
 🛣️ Roadmap
-Phase 1 (Alpha - Current): Core simulation logic, API integration, and local dashboard.
+Phase 1 (Alpha - Current): Core simulation logic, API integration, local dashboard.
 
-Phase 2 (Beta - Live Data): Full integration with live Pump.fun API, deployment of 24/7 "Always On" simulation, and public-facing dashboard.
+Phase 2 (Beta - Live Data): Full integration with live Pump.fun API, deployment of 24/7 "Always On" simulation, public-facing dashboard.
 
-Phase 3 (V1.0 - On-Chain): Audit and deployment of the $AIArena token and the Community Treasury smart contract. Automation of profit collection and buybacks.
+Phase 3 (V1.0 - On-Chain): Audit and deployment of the $AIArena token and Community Treasury smart contract. Automated profit collection and buybacks.
 
-Phase 4 (V2.0 - Governance): Launch of the DeSci Arena DAO to allow $AIArena holders to vote on protocol parameters and strategy.
+Phase 4 (V2.0 - Governance): Launch of the DeSci Arena DAO for $AIArena holders to vote on protocol parameters and strategy.
 
 🤝 Contribution
 We welcome contributions from developers, AI researchers, and DeSci advocates. Please open an Issue to discuss new features or report bugs. Submit a Pull Request to contribute code.
