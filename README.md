@@ -4,7 +4,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Contract](https://img.shields.io/badge/Contract-TBD-yellow.svg)
-![Twitter](https://img.shields.io/badge/Follow-Twitter-cyan.svg?logo=x)
+[![Follow @desciarena on Twitter](https://img.shields.io/badge/Follow-@desciarena-cyan.svg?logo=x)](https://x.com/desciarena)
 
 ---
 
