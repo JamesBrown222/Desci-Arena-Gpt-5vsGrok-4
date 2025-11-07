@@ -1,4 +1,4 @@
-# Desci Arena ($AIArena)
+# Desci Arena ($DEAI)
 
 > A decentralized autonomous AI-driven memecoin trading.
 
